@@ -1,0 +1,64 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<Dialog>
+		<f:SimpleForm id="StudentReg" editable="true" layout="ResponsiveGridLayout" 
+				title="Student Registration" labelSpanL="2" labelSpanM="2" emptySpanL="0"
+				emptySpanM="0" columnsL="1" columnsM="1" class="editableform"
+		>
+		<f:content>
+			<core:Title text="Basic Student Info" ></core:Title>
+			<Label text="Name" />
+			<Input value="{/firstName}" placeholder="First Name" />
+			<Input value="{/middleName}" placeholder="Middle Name">
+				<layoutData>
+					<l:GridData span="L3 M3 S4" />
+				</layoutData>
+			</Input>
+			<Input value="{/lastName}" placeholder="Last Name">
+				<layoutData>
+					<l:GridData span="L3 M3 S4" />
+				</layoutData>
+			</Input>
+			<core:Icon src="sap-icon://person-placeholder" size="3em"></core:Icon>
+			<Label text="Gender"></Label>
+			<RadioButtonGroup  columns="4" selectedIndex="{/gender}" width="100%" select="onGenderSelect">
+				<buttons>
+					<RadioButton id="rbnFemale" text="Female" />
+						
+					<RadioButton id="rbnMale" text="Male" />
+				</buttons>
+			</RadioButtonGroup>
+			<Label text="Date of Birth" />
+			<DatePicker id="validFromPickerEdit" value="{/dob}"  >
+				<layoutData>
+					<l:GridData span="L4 M3 S4" />
+				</layoutData>
+			</DatePicker>
+			<Label text="Father Name" />
+			<Input value="{/fatherName}" placeholder="Father's Name" >
+				<layoutData>
+					<l:GridData span="L4 M3 S4" />
+				</layoutData>
+			</Input>
+			<Label text="Phone number" />
+			<Input value="{/contact}" placeholder="Contact Number">
+				<layoutData>
+					<l:GridData span="L4 M3 S4" />
+				</layoutData>
+			</Input>
+			<Label text="Alternative number" />
+			<Input value="{/altcontact}" placeholder=" Alternative Contact Number">
+				<layoutData>
+					<l:GridData span="L4 M3 S4" />
+				</layoutData>
+			</Input>
+			<Label text="" />
+			<Button type="Accept" text="Add" press="AddStudenRecord"></Button>
+			<Button type="Reject" text="Cancel" press="cancelAddingStd"></Button>
+		</f:content>
+			
+		</f:SimpleForm>
+		
+	</Dialog>
+	
+</core:FragmentDefinition>

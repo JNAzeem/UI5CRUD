@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script id="sap-ui-bootstrap"
+			    type="text/javascript"
+			    src="https://ui5.sap.com/resources/sap-ui-core.js"
+
+				 data-sap-ui-libs="sap.m"
+				 data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{
+				"root": "./" }'
+				data-sap-ui-xx-bindingSytax="complex"
+		></script>
+		<script>
+			var compContainer = new sap.ui.core.ComponentContainer({
+				name: 'root'
+			});
+			compContainer.placeAt("content");
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div id="content"></div>
+	</body>
+</html>

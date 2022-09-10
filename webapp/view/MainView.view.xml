@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="root.controller.MainView">
+
+		<Page title="CRUD Operations ">
+		<content>
+			<Table items="{/students}">
+			<headerToolbar>
+				<Toolbar>
+					<ToolbarSpacer></ToolbarSpacer>
+					<Button text="Add Student" icon="sap-icon://add-employee" press="AddStudentHandler"></Button>
+				</Toolbar>
+			</headerToolbar>
+				<columns>
+					<Column>
+						<Text text="Student Name"></Text>
+					</Column>
+						<Column>
+						<Text text="Gender"></Text>
+					</Column>
+						<Column>
+						<Text text="DOB"></Text>
+					</Column>
+						<Column hAlign="Center">
+						<Text text="Father Name"></Text>
+					</Column>
+						<Column hAlign="Right">
+						<Text text="Contact Number"></Text>
+					</Column>
+						<Column hAlign="Right">
+						<Text text="Action"></Text>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<ObjectIdentifier title="{firstName}" />
+							<Text text="{GenderText}"></Text>
+							<Text text="{dob}"></Text>
+							<Text text="{fatherName}"></Text>
+							<Text text="{contactNumber}"></Text>
+							<HBox>
+								<Button icon="sap-icon://edit" press="EditStdntInfo"></Button>
+								<Button icon="sap-icon://delete" press="DeleteStdntR"></Button>
+							</HBox>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		   
+		    <!--<Button text="Go To Next" width="100px" id="__button0" press="onNext"/>-->
+		</content>
+	</Page>
+	
+</mvc:View>
